@@ -20,7 +20,7 @@ body {
 	background-color: #3498db;
 	width: 100%;
 	height: 865px;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 .homepage_title_div {
@@ -29,14 +29,14 @@ body {
 
 .homepage_title, .homepage_subtitle, #days {
 	font-family: "silkscreen", serif;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 400;
 	color: white;
 	min-width: 1200px;
 }
 
 .homepage_subtitle {
-	font-size: 40px;
+	font-size: 32px;
 	padding-bottom: 25px;
 	padding-top: 10px;
 	font-family: "hydrophilia-iced", serif;
@@ -166,6 +166,7 @@ body {
 
 .connect_links {
 	float: left;
+	margin-top: 25px;
 	width: 125px;
 	height: 125px;
 	margin: 0 10px;
@@ -234,6 +235,19 @@ body {
 	&:hover {
 		background-color: #F1C40F;
 	}	
+}
+
+.shout_out {
+	font-size: 20px;
+	width: 500px;
+	padding-bottom: 20px;
+	border-top: 1px solid white;
+	margin: 0 auto;
+	margin-top: 35px;
+	padding-top: 10px;
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 400;
+	color: white;		
 }
 
 
