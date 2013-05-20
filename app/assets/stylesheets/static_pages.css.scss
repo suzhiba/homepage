@@ -8,7 +8,7 @@ $black: black;
 $green: #19FE54;
 
 // Flat Terminal Colors
-// $black: #33485D;
+$black: #33485D;
 // $green: #00B064;	
 
 
@@ -33,9 +33,13 @@ $green: #19FE54;
 
 .homepage_subtitle {
 	font-size: 40px;
-	padding-bottom: 20px;
+	padding-bottom: 25px;
 	padding-top: 10px;
 	font-family: "hydrophilia-iced", serif;
+	a {
+		text-decoration: none;
+		color: $green;
+	}
 }
 
 #days {
@@ -136,13 +140,13 @@ $green: #19FE54;
 	min-width: 1200px;
 	text-align: center;
 	position: relative;
-	top: -75px;
+	top: -80px;
 }
 
 .check_out_title {
 	font-size: 35px;
 	padding-bottom: 20px;
-	padding-top: 15px;
+	padding-top: 0px;
 	font-family: "freight-sans-pro", sans-serif;
 	font-style: italic;
 	font-weight: 700;
@@ -153,7 +157,7 @@ $green: #19FE54;
 	margin: 0 auto;
 	text-align: center;
 	height: 125px;
-	width: 500px;
+	width: 1200px;
 }
 
 .connect_links {
@@ -175,14 +179,58 @@ $green: #19FE54;
 }
 
 .connect_twitter {
-	background-color: #5CACE2;
 	&:hover {
 		background-color: #06ADE8;
 	}	
 }
 
+.connect_blog {
+	&:hover {
+		background-color: #2980b9;
+	}	
+}
 
+.connect_linked_in {
+	&:hover {
+		background-color: #1381BB;
+	}	
+}
 
+.connect_github {
+	&:hover {
+		background-color: black;
+	}	
+}
+
+.connect_instagram {
+	&:hover {
+		background-color: #4C2E27;
+	}	
+}
+
+.connect_flock {
+	background: url(connect_flock.png) no-repeat center center;
+	background-color: #5CABDF;
+	&:hover {
+		background: url(connect_flock_dark.png) no-repeat center center;
+		background-color: #639F64;
+	}	
+}
+
+.connect_rtj {
+	background: url(connect_rtj.png) no-repeat center center;
+	background-color: #5CABDF;
+	&:hover {
+		background: url(connect_rtj_dark.png) no-repeat center center;
+		background-color: white;
+	}	
+}
+
+.connect_email {
+	&:hover {
+		background-color: #F1C40F;
+	}	
+}
 
 
 
