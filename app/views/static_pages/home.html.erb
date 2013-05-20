@@ -1,0 +1,68 @@
+
+<div class="homepage_background">
+	<div class="terminal_top_border">
+		<span class="terminal_top_border_text">awaxman - bash</span>
+	</div>
+	<div class="terminal_ajw">	
+		<p class="terminal_font">
+			Last login: <span id="today"></span><br>
+			Adam-Waxmans-MacBook:~ $ Hi, I'm Adam<br>
+			Adam-Waxmans-MacBook:~ $ I left my i-banking job and began coding
+				<span id="days"></span>
+				days ago<br>
+			Adam-Waxmans-MacBook:~ $ Type 'help' to see available commands and get to know me<br>
+		</p>
+	</div>
+	<div id="jq_terminal"></div>
+</div>
+
+
+
+<script>
+var myVar=setInterval(function(){myTimer()},1000);
+
+function myTimer(){
+	var d1=new Date();
+	var d2=new Date('1/15/13');
+	var t=d1.toLocaleTimeString();
+	var dif = d2.getTime()
+	
+	// Number of milliseconds since 1/15/2013 divided by sec / min / 
+	var days = ((d1.getTime() - d2.getTime())/60/60/24/1000).toFixed(0)
+	var seconds = numberWithCommas(((d1.getTime() - d2.getTime())/1000).toFixed(0))
+	document.getElementById("days").innerHTML=days;
+	//document.getElementById("seconds").innerHTML=seconds;
+	document.getElementById("today").innerHTML=d1;
+	console.log(dif)
+
+	function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+}
+
+$('#jq_terminal').terminal(function(command, term) {
+    if (command == 'help') {
+        term.echo("Available commands: 'education','work_history','favorite_band'");
+    } 
+
+    else if (command == 'education') {
+    	term.echo("I went to Emory University in Atlanta, GA, and studied Economics, Mathematics,\nand Philosophy");
+    } 
+
+    else if (command == 'work_history') {
+    	term.echo("Right our of school I worked for SunTrust Robinson Humphrey as an investment banking\nanalyst covering Financial Services and Technology companies");
+    } 
+
+    else if (command == 'favorite_band') {
+    	term.echo("Michael Franti & Spearhead");
+    } 
+    
+    else {
+        term.echo('unknown command');
+    }
+}, { prompt: 'Adam-Waxmans-MacBook:~ $ ', name: 'test' });
+
+
+
+
+</script>

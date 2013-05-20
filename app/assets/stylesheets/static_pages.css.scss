@@ -1,0 +1,106 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Old School Terminal Colors
+$black: black;
+$green: #19FE54;
+
+// Flat Terminal Colors
+// $black: #33485D;
+// $green: #00B064;	
+
+
+.homepage_background {
+	background-color: #3498db;
+	width: 100%;
+	height: 700px;
+	padding-top: 50px;
+}
+
+.terminal_top_border {
+	width: 1200px;
+	height: 30px;
+	background-color: #DEDEDE;
+	margin: 0 auto;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+	text-align: center;
+}
+
+.terminal_top_border_text {
+	color: #A5A5A5;
+	font-family: "prestige-elite-std", serif;
+	font-size: 22px;
+	font-weight: 700;
+	position: relative;
+	top: 3px;
+}
+
+
+.terminal_ajw {
+	width: 1200px;
+	height: 200px;
+	background-color: $black;
+	margin: 0 auto;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.terminal_font {
+	font-family: "prestige-elite-std", serif;
+	font-size: 22px;
+	color: $green;
+	margin: 0 auto;
+	padding: 20px;
+	font-weight: 700;
+}
+
+
+#jq_terminal {
+	width: 1200px;
+	height: 305px;
+	background-color: $black;
+	margin: 0 auto;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, span, .cursor, .inverted, .terminal-output > div {
+	font-family: "prestige-elite-std", serif;
+	color: $green;
+	font-size: 22px;
+	font-weight: 700;	
+	line-height: 110%;
+}
+
+.terminal {
+	padding: 0;
+	position: relative;
+	top: -80px;
+}
+
+.terminal .terminal-output div div, .cmd {
+  padding: 0 20px;
+}
+
+// .terminal .terminal-output div div {
+// 	display: none;
+// }
+
+.terminal-output {
+	line-height: 100%;
+}
