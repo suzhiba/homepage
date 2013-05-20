@@ -15,8 +15,33 @@ $green: #19FE54;
 .homepage_background {
 	background-color: #3498db;
 	width: 100%;
-	height: 700px;
+	height: 865px;
 	padding-top: 50px;
+}
+
+.homepage_title_div {
+	text-align: center;
+}
+
+.homepage_title, .homepage_subtitle, #days {
+	font-family: "silkscreen", serif;
+	font-size: 50px;
+	font-weight: 400;
+	color: white;
+	min-width: 1200px;
+}
+
+.homepage_subtitle {
+	font-size: 40px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	font-family: "hydrophilia-iced", serif;
+}
+
+#days {
+	color: $green;
+	font-size: 40px;
+	font-family: "hydrophilia-iced", serif;
 }
 
 .terminal_top_border {
@@ -68,7 +93,7 @@ $green: #19FE54;
 
 #jq_terminal {
 	width: 1200px;
-	height: 305px;
+	height: 218px;
 	background-color: $black;
 	margin: 0 auto;
 	-webkit-border-bottom-right-radius: 5px;
@@ -90,7 +115,7 @@ $green: #19FE54;
 .terminal {
 	padding: 0;
 	position: relative;
-	top: -80px;
+	top: -104px;
 }
 
 .terminal .terminal-output div div, .cmd {
@@ -104,3 +129,66 @@ $green: #19FE54;
 .terminal-output {
 	line-height: 100%;
 }
+
+.check_out_div {
+	margin: auto 0;
+	width: 100%;
+	min-width: 1200px;
+	text-align: center;
+	position: relative;
+	top: -75px;
+}
+
+.check_out_title {
+	font-size: 35px;
+	padding-bottom: 20px;
+	padding-top: 15px;
+	font-family: "freight-sans-pro", sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	color: white;	
+}
+
+.connect_div {
+	margin: 0 auto;
+	text-align: center;
+	height: 125px;
+	width: 500px;
+}
+
+.connect_links {
+	float: left;
+	width: 125px;
+	height: 125px;
+	margin: 0 10px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	background-color: #5CACE2;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all color 0.4 ease-in-out;
+	&:hover {
+		background-color: orange;
+	}
+}
+
+.connect_twitter {
+	background-color: #5CACE2;
+	&:hover {
+		background-color: #06ADE8;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
