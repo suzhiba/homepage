@@ -2189,9 +2189,10 @@
                         } else if (matched.length > 1) {
                             if (tab_count >= 2) {
                                 echo_command(command);
-                                self.echo(matched.join('\t'));
+                                self.echo(matched.join("  "));
                                 tab_count = 0;
                             }
+
                         }
                     });
                     return false;

@@ -16,7 +16,7 @@
 		<p class="terminal_font">
 			Last login: <span id="today"></span><br>
 			Adam-Waxmans-MacBook:~ $ Welcome! See instructions below to get to know me<br>
-			Adam-Waxmans-MacBook:~ $ Type 'help' for available commands and 'clear' to start over<br>
+			Adam-Waxmans-MacBook:~ $ Double tap 'tab' for commands, type 'clear' to restart<br>
 		</p>
 	</div>
 	<div id="jq_terminal"></div>
@@ -28,7 +28,7 @@
 		<div class="connect_div">
 			<%= link_to(url_with_protocol('www.awaxman.me')) do %>
 				<div class="connect_links connect_blog">
-					<%= image_tag("connect_blog.png", atl: "Blog", size:"125x125", title: "My Tumblr..now Tumblahoo I guess") %>
+					<%= image_tag("connect_blog.png", atl: "Blog", size:"125x125", title: "My Tumblr..now Yumblr I guess") %>
 				</div>
 			<% end %>
 			<%= link_to(url_with_protocol('https:twitter.com/ajwaxman')) do %>
@@ -122,38 +122,84 @@ function myTimer(){
 // }, { prompt: 'Adam-Waxmans-MacBook:~ $ ', name: 'test', tabcompletion: true});
 
 $('#jq_terminal').terminal({
-		    
-
-    help: function() {
-    		this.echo("Available commands: 'learn_to_code', 'hn', education','work_history','favorite_band' \nand maybe a few more :)" )
+    
+    cd: function(a) {
+    		this.echo(location.href ="http://"+a)
     },
 
-    education: function() {
-    		this.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.")
+    websites: function() {
+    		this.echo("Below are my favorite website:\nhttp://dribbble.com\nhttp://news.ycombinator.com\nhttp://svbtle.com")
+    },
+    
+    work_history: function() {
+    		this.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.")
     },
 
-    ls: function() {
-    		this.echo("Gemfile\nApp\nPublic")
-    },
-
-    hn: function() {
-    		this.echo(location.href='https://news.ycombinator.com/item?id=5744558')
+    terminal_color: function(a) {
+    		if (a == 'normal') {
+    			$(".terminal_ajw").css("background-color", '#33485D');
+    			$("#jq_terminal").css("background-color", '#33485D');
+    		} else {
+    			$(".terminal_ajw,").css("background-color", a);
+    			$("#jq_terminal").css("background-color", a);
+    		}
     },
 
     pwd: function() {
     		this.echo("/Users/awaxman/code/personal_homepage")
     },
 
-    work_history: function() {
-    		this.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.")
+   '\n': function() {
+				this.echo()
     },
 
-    favorite_band: function() {
-    		this.echo("Michael Franti & Spearhead")
+    music: function() {
+    		this.echo("Below are some of my favorite bands:\nMichael Franti \&amp; Spearhead, Bruce Springsteen, Passion Pit, Vampire Weekend, Queewen\n and all mashups")
+    },
+
+    ls: function() {
+    		this.echo("Gemfile\nApp\nPublic")
     },
 
     learn_to_code: function() {
-    		this.echo(location.href='http://prework.flatironschool.com')
+    		this.echo("Below are my favorite resources, check 'em out!\nhttp://prework.flatironschool.com\nhttp://teamtreehouse.com\nhttp://codeschool.com\nhttp://ruby.railstutorial.org/ruby-on-rails-tutorial-book\nhttp://railscasts.com/")
+    },
+
+    hn: function() {
+    		this.echo("Thanks for all the awesome comments and suggestions! Check out the post below:\nhttps://news.ycombinator.com/item?id=5744558")
+    },
+
+    hello: function() {
+    		this.echo("hey! welcome to my site!" )
+    },
+
+    // font_color: function(a) {
+    // 		if (a == 'normal') {
+    // 			$(".terminal_font").css("color", '#19FE54');
+    // 			$(".terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", '#19FE54');
+    // 		} else {
+    // 			$("span, .terminal_font").css("color", a);
+    // 			$("span, .terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", a);
+    // 		}
+    // },
+
+    education: function() {
+    		this.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.")
+    },
+
+    books: function() {
+    		this.echo("Some of my favorite books:\nThe Omnivore's Dilemma, anything by Chuck Klosterman, The Fountainhead")
+    },
+
+    background_color: function(a) {
+    		if (a == 'normal')
+    			$("body").css("background-color", '#3498DB');
+    		else
+    			$("body").css("background-color", a);
+    },
+
+    '': function() {
+				this.echo()
     },
 
 }, { prompt: 'Adam-Waxmans-MacBook:~ $ ', greeting: false, tabcompletion: true });
