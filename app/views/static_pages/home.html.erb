@@ -21,6 +21,7 @@
 	</div>
 	<div id="jq_terminal"></div>
 	<div class="check_out_div">
+		<div class="say_hi">Say hi @ <a title = "Would love to connect!" href="mailto:awaxman11@gmail.com?subject=Hello">awaxman11@gmail.com</a></div>
 		<div class="check_out_title">
 			MY THOUGHTS, PROFILES, AND PROJECTS:
 		</div>
@@ -59,11 +60,6 @@
 					
 				</div>
 			<% end %>	
-			<a href="mailto:awaxman11@gmail.com?subject=Hello">
-				<span class="connect_links connect_email">
-					<%= image_tag("connect_email.png", atl: "GitHub", size:"125x125", title: "Drop me a note, I'd love to connect") %>
-				</span>
-			</a>		
 		</div>
 
 
@@ -98,27 +94,69 @@ function myTimer(){
 	}
 }
 
-$('#jq_terminal').terminal(function(command, term) {
-    if (command.toLowerCase() == 'help') {
-        term.echo("Available commands: 'education','work_history','favorite_band'");
-    } 
+// $('#jq_terminal').terminal(function(command, term) {
+//     if (command.toLowerCase() == 'help') {
+//         term.echo("Available commands: 'hn', education','work_history','favorite_band'");
+//         tabcompletion = true;
+//     }
 
-    else if (command.toLowerCase() == 'education' || command.toLowerCase() == '\'education\'') {
-    	term.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.");
-    } 
+//     else if (command.toLowerCase() == 'education' || command.toLowerCase() == '\'education\'') {
+//     	term.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.");
+//     } 
 
-    else if (command.toLowerCase() == 'work_history' ||  command.toLowerCase() == "work history" || command.toLowerCase() == '\'work_history\'' || command.toLowerCase() == '\'work history\'') {
-    	term.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.");
-    } 
+//     else if (command.toLowerCase() == 'work_history' ||  command.toLowerCase() == "work history" || command.toLowerCase() == '\'work_history\'' || command.toLowerCase() == '\'work history\'') {
+//     	term.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.");
+//     } 
 
-    else if (command == 'favorite_band') {
-    	term.echo("Michael Franti & Spearhead");
-    } 
+//     else if (command == 'favorite_band') {
+//     	term.echo("Michael Franti & Spearhead");
+//     } 
+
+//     else if (command == 'favorite_band') {
+//     	term.echo("Michael Franti & Spearhead");
+//     } 
     
-    else {
-        term.echo('unknown command');
-    }
-}, { prompt: 'Adam-Waxmans-MacBook:~ $ ', name: 'test' });
+//     else {
+//         term.echo('unknown command');
+//     }
+// }, { prompt: 'Adam-Waxmans-MacBook:~ $ ', name: 'test', tabcompletion: true});
+
+$('#jq_terminal').terminal({
+		    
+
+    help: function() {
+    		this.echo("Available commands: 'learn_to_code', 'hn', education','work_history','favorite_band' \nand maybe a few more :)" )
+    },
+
+    education: function() {
+    		this.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.")
+    },
+
+    ls: function() {
+    		this.echo("Gemfile\nApp\nPublic")
+    },
+
+    hn: function() {
+    		this.echo(location.href='https://news.ycombinator.com/item?id=5744558')
+    },
+
+    pwd: function() {
+    		this.echo("/Users/awaxman/code/personal_homepage")
+    },
+
+    work_history: function() {
+    		this.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.")
+    },
+
+    favorite_band: function() {
+    		this.echo("Michael Franti & Spearhead")
+    },
+
+    learn_to_code: function() {
+    		this.echo(location.href='http://prework.flatironschool.com')
+    },
+
+}, { prompt: 'Adam-Waxmans-MacBook:~ $ ', greeting: false, tabcompletion: true });
 
 
 
