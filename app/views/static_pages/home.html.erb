@@ -78,17 +78,20 @@ var myVar=setInterval(function(){myTimer()},1000);
 
 function myTimer(){
 	var d1=new Date();
-	var d2=new Date('1/15/13');
+	var d2=new Date('1/15/2013');
 	var t=d1.toLocaleTimeString();
 	var dif = d2.getTime()
 	
 	// Number of milliseconds since 1/15/2013 divided by sec / min / 
-	var days = ((d1.getTime() - d2.getTime())/60/60/24/1000).toFixed(5)
+	var days = ((Math.abs(d1.getTime()) - Math.abs(d2.getTime()))/60/60/24/1000).toFixed(5)
 	var seconds = numberWithCommas(((d1.getTime() - d2.getTime())/1000).toFixed(0))
 	document.getElementById("days").innerHTML=days;
 	//document.getElementById("seconds").innerHTML=seconds;
 	document.getElementById("today").innerHTML=d1;
 	console.log(dif)
+	console.log(d1.getTime())
+	console.log(d1)
+	console.log(d2)
 
 	function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
