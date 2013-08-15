@@ -5,6 +5,10 @@
   <div class="homepage_title_div">
     <% h1 = "<p>" %>
     <% h2 = "</p>" %>
+    <a href="https://twitter.com/share?text=Check out my personal homepage: @flatironschool job fair edition!" class="twitter-share-button" data-url="http://awaxman.com/flatiron" data-via="ajwaxman" data-lang="en">Tweet</a>
+    <span style="left:-20px;"class="fb-like" data-href="http://awaxman.com/flatiron" data-width="" data-layout="button_count" data-show-faces="true" data-send="false"></span>
+    <span id="fb-root"></span>
+    <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="Personal Homepage: Flatiron School Job Fair Edition" data-url="http://awaxman.com/flatiron">Vote on HN</a>
     <div class="new_homepage_subtitle homepage_subtitle">Welcome to the <a href="http://flatironschool.com">Flatiron School</a> Science Fair!<br><div class="new_sub_sub_title">I'm <a href="https://medium.com/what-i-learned-today/fa128509b99b">Adam</a>. I quit my job and began coding <span id="days"></span> days ago.</div></div>
   </div>
   <div class="terminal_top_border">
@@ -23,14 +27,14 @@
     <div class="check_out_title">
       STUFF I'VE BUILT:
     </div>
-    <div class="connect_div">
-      <%= link_to(url_with_protocol('https://hireme.flatironschool.com')) do %>
+    <div class="connect_div new_connect_div">
+      <%= link_to(url_with_protocol('http://hireme.flatironschool.com')) do %>
         <div class="connect_links connect_hireme">
-          <%= image_tag("connect_hireme.png", atl: "Hire Me", size:"125x125", title: "HIRE ME: My Flatiron School project. A CRM tool to help manage the interview process") %>
+          <%= image_tag("connect_hireme.png", atl: "Hire Me", size:"125x125", title: "HIRE ME: My Flatiron School project. A CRM tool to help schools manage interview processes") %>
         </div>
       <% end %>
       <%= link_to(url_with_protocol('http://flockwithme.com')) do %>
-        <div title="FLOCK: A fun and casual way to make plans. Download on the iOS app store today!"class="connect_links connect_flock">
+        <div title="FLOCK: A fun and casual way to make plans. Download on the App Store today!"class="connect_links connect_flock">
         </div>
       <% end %> 
       <%= link_to(url_with_protocol('https://whispering-tundra-5255.herokuapp.com/')) do %>
@@ -92,6 +96,23 @@
 
 
 <script>
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=426154300770370";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = '//hnbutton.appspot.com/static/hn.min.js';
+    s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
@@ -164,7 +185,7 @@ $('#jq_terminal').terminal({
     },
 
     websites: function() {
-        this.echo("Below are my favorite website:\nhttp://dribbble.com\nhttp://news.ycombinator.com\nhttp://svbtle.com")
+        this.echo("Below are my favorite website:\nhttp://dribbble.com\nhttp://news.ycombinator.com\nhttp://unsplash.com")
     },
     
     work_history: function() {
