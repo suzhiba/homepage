@@ -1,5 +1,6 @@
 PersonalHomepage::Application.routes.draw do
   root to: 'static_pages#home'
+  get '/flatiron' => 'static_pages#flatiron'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
