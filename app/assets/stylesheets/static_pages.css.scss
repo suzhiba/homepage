@@ -373,7 +373,7 @@ a {
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .arrow.top:after {
     bottom: -20px;
@@ -388,6 +388,13 @@ a {
   	margin-top: 60px;
   }
 
+span#l.label {
+	padding-right: 5px;
+}
+
+.btn-o {
+	padding-right: 5px;
+}
 
 
 
