@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def flatiron
   end
+
+  def v1
+  end
 end

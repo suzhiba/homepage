@@ -2,204 +2,276 @@
 
 
 <div class="homepage_background">
-	<div class="homepage_title_div">
-		<% h1 = "<p>" %>
-		<% h2 = "</p>" %>
-		<div class="homepage_title">Hi, I'm Adam.</div>
-		<div class="homepage_subtitle">I quit my i-banking job and began coding <span id="days"></span> days ago.<br>
-			I am currently building, breaking, and learning @ the <a href="http://flatironschool.com">Flatiron School</a></div>
-	</div>
-	<div class="terminal_top_border">
-		<span class="terminal_top_border_text">ajwaxman - bash</span>
-	</div>
-	<div class="terminal_ajw">	
-		<p class="terminal_font">
-			Last login: <span id="today"></span><br>
-			Adam-Waxmans-MacBook:~ $ Welcome! See instructions below to get to know me<br>
-			Adam-Waxmans-MacBook:~ $ Double tap 'tab' for commands, type 'clear' to restart<br>
-		</p>
-	</div>
-	<div id="jq_terminal"></div>
-	<div class="check_out_div">
-		<div class="say_hi">Say hi @ <a title = "Would love to connect!" href="mailto:awaxman11@gmail.com?subject=Hello">awaxman11@gmail.com</a></div>
-		<div class="check_out_title">
-			MY THOUGHTS, PROFILES, AND PROJECTS:
-		</div>
-		<div class="connect_div">
-			<%= link_to(url_with_protocol('https://medium.com/@ajwaxman')) do %>
-				<div class="connect_links connect_blog">
-					<%= image_tag("connect_blog.png", atl: "Blog", size:"125x125", title: "My thoughts and lessons learned") %>
-				</div>
-			<% end %>
-			<%= link_to(url_with_protocol('https:twitter.com/ajwaxman')) do %>
-				<div class="connect_links connect_twitter">
-					<%= image_tag("connect_twitter.png", atl: "Twitter", size:"125x125", title: "Please follow me!!") %>
-				</div>
-			<% end %>
-			<%= link_to(url_with_protocol('https:linkedin.com/in/adamjwaxman')) do %>
-				<div class="connect_links connect_linked_in">
-					<%= image_tag("connect_linked_in.png", atl: "LinkedIn", size:"125x125", title: "LinkedIn is absolutely crushing it these days") %>
-				</div>
-			<% end %>
-			<%= link_to(url_with_protocol('https://github.com/awaxman11')) do %>
-				<div class="connect_links connect_github">
-					<%= image_tag("connect_github.png", atl: "GitHub", size:"125x125", title: "If you care about this site you recognize the logo") %>
-				</div>
-			<% end %>
-			<%= link_to(url_with_protocol('https://instagram.com/awaxman11')) do %>
-				<div class="connect_links connect_instagram">
-					<%= image_tag("connect_instagram.png", atl: "Instagram", size:"125x125", title: "My instagram photos") %>
-				</div>
-			<% end %>
-			<%= link_to(url_with_protocol('http://flockwithme.com')) do %>
-				<div title="Flock: A mobile app I'm working on to help friends connect offline. Launching soon!"class="connect_links connect_flock">
-				</div>
-			<% end %>	
-			<%= link_to(url_with_protocol('http://rulethejungle.com')) do %>
-				<div title="Rule the Jungle: We help take the hassle out of planning the perfect date.  Full website launching soon!" class="connect_links connect_rtj">
-					
-				</div>
-			<% end %>	
-		</div>
+  <div class="homepage_title_div">
+    <% h1 = "<p>" %>
+    <% h2 = "</p>" %>
+    <span style="padding-right: 15px"><a href="https://twitter.com/ajwaxman" class="twitter-follow-button" data-show-count="false">Follow @ajwaxman</a></span>  
+    <a href="https://twitter.com/share?text=Philosopher turned banker turned programmer: my personal homepage!" class="twitter-share-button" data-url="http://awaxman.com/" data-via="ajwaxman" data-lang="en">Tweet</a>
+    <span style="left:-20px;"class="fb-like" data-href="http://awaxman.com" data-width="" data-layout="button_count" data-show-faces="true" data-send="false"></span>
+    <span id="fb-root"></span>
 
+    <div class="new_homepage_subtitle_2 homepage_subtitle"><div class="new_sub_sub_title">Hi, I'm <a href="https://medium.com/what-i-learned-today/fa128509b99b">Adam</a>. I graduated from the <a href="https://flatironschool.com">Flatiron School</a> <span id="days2"></span> days ago. <br>I'm currently looking for full-time web developer opportunities.</div></div>
+    <div class="button_holder"><a href="mailto:awaxman11@gmail.com?subject=Let's Talk"id="hireme">Hire Me</a></div>
+  </div>
+  <div class="terminal_top_border">
+    <span class="terminal_top_border_text">ajwaxman - bash</span>
+  </div>
+  <div class="terminal_ajw">  
+    <p class="terminal_font">
+      Last login: <span id="today"></span><br>
+      Adam-Waxmans-MacBook:~ $ See instructions below to get to know me<br>
+      Adam-Waxmans-MacBook:~ $ Double tap 'tab' for commands, type 'clear' to restart<br>
+    </p>
+  </div>
+  <div id="jq_terminal"></div>
+  <div class="check_out_div">
 
-		<div class="shout_out">Special shoutout to <a href="http://jcubic.pl/">jcubic</a> for the awesome terminal <a href="http://terminal.jcubic.pl/">plugin</a></div>
-	</div>
+    <div class="check_out_title">
+      STUFF I'VE BUILT:
+    </div>
+    <div class="connect_div new_connect_div">
+      <%= link_to(url_with_protocol('http://hire.flatironschool.com')) do %>
+        <div class="connect_links connect_hireme">
+          <%= image_tag("connect_hireme.png", atl: "Hire Me", size:"125x125", title: "HIRE ME: My Flatiron School project. A CRM tool to help schools manage interview processes") %>
+        </div>
+      <% end %>
+      <%= link_to(url_with_protocol('http://flockwithme.com')) do %>
+        <div title="FLOCK: A fun and casual way to make plans. Download on the App Store today!"class="connect_links connect_flock">
+        </div>
+      <% end %> 
+      <%= link_to(url_with_protocol('https://whispering-tundra-5255.herokuapp.com/')) do %>
+        <div title="RULE THE JUNLGE: Taking the hassle out of planning the perfect date. Coming soon!" class="connect_links connect_rtj"> 
+        </div>
+      <% end %> 
+      <%= link_to(url_with_protocol('http://found.io')) do %>
+        <div title="FOUND: Helping startups find comfortable and affordable office space" class="connect_links connect_found">
+        </div>
+      <% end %> 
+      <%= link_to(url_with_protocol('http://techcrunch.com/2013/04/28/created-by-newbie-coders-others-espace-connects-meetup-organizers-and-venue-owners/')) do %>
+        <div class="connect_links connect_espace">
+          <%= image_tag("connect_espace.png", atl: "Espace", size:"125x125", title: "ESPACE: My TechCrunch Disrupt NY Hackathon project. Check us out on the front page of TC!") %>
+        </div>
+      <% end %>
+    </div>
+
+  <div class="shout_out new_shout_out"></a></div>
+
+  <div class="check_out_div">
+    <div class="check_out_title check_out_title_2">
+      BLOGS AND PROFILES:
+    </div>
+    <div class="connect_div_2">
+      <%= link_to(url_with_protocol('https://medium.com/@ajwaxman')) do %>
+        <div class="connect_links connect_blog">
+          <%= image_tag("connect_blog.png", atl: "Blog", size:"125x125", title: "Personal blog") %>
+        </div>
+      <% end %>
+      <%= link_to(url_with_protocol('http://awaxman11.github.io')) do %>
+        <div class="connect_links connect_blog">
+          <%= image_tag("connect_code.png", atl: "Technical Blog", size:"125x125", title: "Technical blog - one of my recent articles was featured in Ruby Weekly!") %>
+        </div>
+      <% end %>
+      <%= link_to(url_with_protocol('https:twitter.com/ajwaxman')) do %>
+        <div class="connect_links connect_twitter">
+          <%= image_tag("connect_twitter.png", atl: "Twitter", size:"125x125", title: "Please follow me!!") %>
+        </div>
+      <% end %>
+
+      <%= link_to(url_with_protocol('https://github.com/awaxman11')) do %>
+        <div class="connect_links connect_github">
+          <%= image_tag("connect_github.png", atl: "GitHub", size:"125x125", title: "If you care about this site you recognize the logo") %>
+        </div>
+      <% end %>
+      <%= link_to(url_with_protocol('https://instagram.com/awaxman11')) do %>
+        <div class="connect_links connect_instagram">
+          <%= image_tag("connect_instagram.png", atl: "Instagram", size:"125x125", title: "My instagram photos") %>
+        </div>
+      <% end %>
+      <%= link_to(url_with_protocol('https:linkedin.com/in/adamjwaxman')) do %>
+        <div class="connect_links connect_linked_in">
+          <%= image_tag("connect_linked_in.png", atl: "LinkedIn", size:"125x125", title: "My \"professional\" profile") %>
+        </div>
+      <% end %>    </div>
+      <div class="say_hi new_say_hi">Say hi @ <a title = "Would love to connect!" href="mailto:awaxman11@gmail.com?subject=Hello">awaxman11@gmail.com</a></div>
+  </div>
 </div>
 
-<a href=""></a>
 
 <script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=426154300770370";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = '//hnbutton.appspot.com/static/hn.min.js';
+    s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+preload([
+    'assets/connect_flock_dark.png',
+    'assets/connect_rtj_dark.png',
+    'connect_found_dark.png'
+]);
+
+$("div[title]").tooltip({
+  position: 
+    {     
+      at: 'center top-20',
+      my: 'center bottom',
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+      }
+    }
+});
+$("img[title]").tooltip({
+  position: 
+    {     
+      at: 'center top-20',
+      my: 'center bottom',
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+      }
+    }
+});
+
+var d3=new Date();
+var t=d3.toLocaleTimeString();
+document.getElementById("today").innerHTML=d3;
+
+
 var myVar=setInterval(function(){myTimer()},1000);
 
 function myTimer(){
-	var d1=new Date();
-	var d2=new Date('1/15/2013');
-	var t=d1.toLocaleTimeString();
-	var dif = d2.getTime()
-	
-	// Number of milliseconds since 1/15/2013 divided by sec / min / 
-	var days = ((Math.abs(d1.getTime()) - Math.abs(d2.getTime()))/60/60/24/1000).toFixed(5)
-	var seconds = numberWithCommas(((d1.getTime() - d2.getTime())/1000).toFixed(0))
-	document.getElementById("days").innerHTML=days;
-	//document.getElementById("seconds").innerHTML=seconds;
-	document.getElementById("today").innerHTML=d1;
-	console.log(dif)
-	console.log(d1.getTime())
-	console.log(d1)
-	console.log(d2)
+  var d2=new Date('8/23/2013');
+  var dif = d2.getTime()
+  var d1=new Date();
+  var t=d1.toLocaleTimeString();
+  
+  // Number of milliseconds since 1/15/2013 divided by sec / min / 
+  var days = ((Math.abs(d1.getTime()) - Math.abs(d2.getTime()))/60/60/24/1000).toFixed(5)
+  var seconds = numberWithCommas(((d1.getTime() - d2.getTime())/1000).toFixed(0))
+  document.getElementById("days2").innerHTML=days;
+  //document.getElementById("seconds").innerHTML=seconds;
+  
 
-	function numberWithCommas(x) {
+  function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
+  }
 }
-
-// $('#jq_terminal').terminal(function(command, term) {
-//     if (command.toLowerCase() == 'help') {
-//         term.echo("Available commands: 'hn', education','work_history','favorite_band'");
-//         tabcompletion = true;
-//     }
-
-//     else if (command.toLowerCase() == 'education' || command.toLowerCase() == '\'education\'') {
-//     	term.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.");
-//     } 
-
-//     else if (command.toLowerCase() == 'work_history' ||  command.toLowerCase() == "work history" || command.toLowerCase() == '\'work_history\'' || command.toLowerCase() == '\'work history\'') {
-//     	term.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.");
-//     } 
-
-//     else if (command == 'favorite_band') {
-//     	term.echo("Michael Franti & Spearhead");
-//     } 
-
-//     else if (command == 'favorite_band') {
-//     	term.echo("Michael Franti & Spearhead");
-//     } 
-    
-//     else {
-//         term.echo('unknown command');
-//     }
-// }, { prompt: 'Adam-Waxmans-MacBook:~ $ ', name: 'test', tabcompletion: true});
 
 $('#jq_terminal').terminal({
     
     cd: function(a) {
-    		this.echo(location.href ="http://"+a)
+        this.echo(location.href ="http://"+a)
+    },
+
+    why_i_quit: function() {
+        this.echo(location.href ="https://medium.com/what-i-learned-today/fa128509b99b")
+    },
+
+    what_is_flock: function() {
+        this.echo(location.href ="https://medium.com/look-what-i-made/4e667ad7a098")
     },
 
     websites: function() {
-    		this.echo("Below are my favorite website:\nhttp://dribbble.com\nhttp://news.ycombinator.com\nhttp://svbtle.com")
+        this.echo("Below are my favorite website:\nhttp://dribbble.com\nhttp://news.ycombinator.com\nhttp://unsplash.com")
     },
     
     work_history: function() {
-    		this.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.")
+        this.echo("Right out of school I worked for SunTrust Robinson Humphrey as an i-banking analyst.\nI helped Financial Services \&amp; Technology companies raise capital and execute M\&amp;A opps.")
     },
 
     terminal_color: function(a) {
-    		if (a == 'normal') {
-    			$(".terminal_ajw").css("background-color", '#33485D');
-    			$("#jq_terminal").css("background-color", '#33485D');
-    		} else {
-    			$(".terminal_ajw,").css("background-color", a);
-    			$("#jq_terminal").css("background-color", a);
-    		}
+        if (a == 'normal') {
+          $(".terminal_ajw").css("background-color", '#33485D');
+          $("#jq_terminal").css("background-color", '#33485D');
+        } else {
+          $(".terminal_ajw,").css("background-color", a);
+          $("#jq_terminal").css("background-color", a);
+        }
     },
 
     pwd: function() {
-    		this.echo("/Users/awaxman/code/personal_homepage")
+        this.echo("/Users/awaxman/code/personal_homepage")
     },
 
    '\n': function() {
-				this.echo()
+        this.echo()
     },
 
     music: function() {
-    		this.echo("Below are some of my favorite bands:\nMichael Franti \&amp; Spearhead, Bruce Springsteen, Passion Pit, Vampire Weekend, Queen\nand all mashups")
+        this.echo("Below are some of my favorite bands:\nMichael Franti \&amp; Spearhead, Bruce Springsteen, Passion Pit, Vampire Weekend, Queen\nand all mashups")
     },
 
     ls: function() {
-    		this.echo("Gemfile\nApp\nPublic")
+        this.echo("Gemfile\nApp\nPublic")
     },
 
     learn_to_code: function() {
-    		this.echo("Below are my favorite resources, check 'em out!\nhttp://prework.flatironschool.com\nhttp://teamtreehouse.com\nhttp://codeschool.com\nhttp://ruby.railstutorial.org/ruby-on-rails-tutorial-book\nhttp://railscasts.com/")
+        this.echo(location.href ="https://medium.com/on-coding/41fe6fc1b8df")  
     },
 
     hn: function() {
-    		this.echo("Thanks for all the awesome comments and suggestions! Check out the post below:\nhttps://news.ycombinator.com/item?id=5744558")
+        this.echo("Thanks for all the awesome comments and suggestions! Check out the post below:\nhttps://news.ycombinator.com/item?id=5744558")
     },
 
     hello: function() {
-    		this.echo("hey! welcome to my site!" )
+        this.echo("hey! welcome to my site!" )
     },
 
     // font_color: function(a) {
-    // 		if (a == 'normal') {
-    // 			$(".terminal_font").css("color", '#19FE54');
-    // 			$(".terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", '#19FE54');
-    // 		} else {
-    // 			$("span, .terminal_font").css("color", a);
-    // 			$("span, .terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", a);
-    // 		}
+    //    if (a == 'normal') {
+    //      $(".terminal_font").css("color", '#19FE54');
+    //      $(".terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", '#19FE54');
+    //    } else {
+    //      $("span, .terminal_font").css("color", a);
+    //      $("span, .terminal-output > div, .terminal .terminal-output div div, .terminal, .terminal-output, div.terminal-output, .cmd, .prompt, span.inverted, #today, .cursor, .inverted, .terminal-output > div").css("color", a);
+    //    }
     // },
 
     education: function() {
-    		this.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.")
+        this.echo("I went to Emory University in Atlanta, GA.  I studied Economics, Mathematics,\nand Philosophy and was a center defender on the varsity soccer team.")
     },
 
     books: function() {
-    		this.echo("Some of my favorite books:\nThe Omnivore's Dilemma, anything by Chuck Klosterman, The Fountainhead")
+        this.echo("Some of my favorite books:\nThe Omnivore's Dilemma, anything by Chuck Klosterman, The Fountainhead")
     },
 
     background_color: function(a) {
-    		if (a == 'normal')
-    			$("body").css("background-color", '#3498DB');
-    		else
-    			$("body").css("background-color", a);
+        if (a == 'normal')
+          $("body").css("background-color", '#3498DB');
+        else
+          $("body").css("background-color", a);
     },
 
     '': function() {
-				this.echo()
+        this.echo()
     },
 
 }, { prompt: 'Adam-Waxmans-MacBook:~ $ ', greeting: false, tabcompletion: true });

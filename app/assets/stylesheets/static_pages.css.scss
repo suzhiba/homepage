@@ -41,7 +41,7 @@ a {
 
 .homepage_subtitle, .new_homepage_subtitle {
 	font-size: 32px;
-	padding-bottom: 25px;
+	padding-bottom: 15px;
 	padding-top: 10px;
 	font-family: "hydrophilia-iced", serif;
 	a {
@@ -54,6 +54,11 @@ a {
 	font-size: 55px;
 }
 
+.new_homepage_subtitle_2 {
+  font-size: 35px;
+  padding-top: 20px;
+}
+
 .new_sub_sub_title {
 	font-size: 32px;
 	margin-top: 10px;
@@ -63,6 +68,12 @@ a {
 	color: $green;
 	font-size: 40px;
 	font-family: "hydrophilia-iced", serif;
+}
+
+#days2 {
+  color: white;
+  font-size: 28px;
+  font-family: "hydrophilia-iced", serif;
 }
 
 .terminal_top_border {
@@ -394,6 +405,38 @@ span#l.label {
 
 .btn-o {
 	padding-right: 5px;
+}
+
+.button_holder {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+#hireme {
+  background: white;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  width: 100px;
+  text-align: center;
+  padding: 15px 50px;
+  border: 2px solid $green;
+  text-decoration: none;
+  font-family: "freight-sans-pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all color 0.4 ease-in-out;
+  // color: #0097E0;
+  &:hover {
+    color: white;
+    background: $green;
+    border: 2px solid white;
+  }
 }
 
 
